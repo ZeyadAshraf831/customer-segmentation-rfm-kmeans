@@ -43,3 +43,25 @@ This segmentation enables targeted marketing strategies — e.g., loyalty reward
 - **4 segments**: VIP, Loyal, New, Lost
 - Average Monetary: **$2,048**
 - Average Recency: **92 days**
+
+# Customer Segmentation - RFM Analysis & K-Means Clustering
+
+## 📌 Overview
+Customer segmentation project using RFM Analysis and K-Means Clustering
+on real e-commerce data (541,909 transactions).
+
+## 📊 Dashboard
+![Dashboard](dashboard_screenshot.png)
+
+## 🔧 Tech Stack
+- Python, Pandas, Scikit-learn
+- PyTorch (Autoencoder)
+- Power BI
+
+## 📈 Results
+| Segment | Customers | Avg Monetary |
+|---------|-----------|--------------|
+| VIP     | 713       | $8,088       |
+| Loyal   | 1,166     | $1,802       |
+| New     | 837       | $557         |
+| Lost    | 1,622     | $341         |
