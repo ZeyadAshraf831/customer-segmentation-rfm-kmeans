@@ -1,67 +1,141 @@
-# Customer Segmentation — RFM Analysis
+# Customer Segmentation using RFM Analysis & K-Means Clustering
 
-Segmenting e-commerce customers using **RFM analysis** (Recency, Frequency, Monetary) combined with **K-Means clustering** to identify actionable customer groups for targeted marketing.
+## Overview
+
+This project applies **RFM Analysis (Recency, Frequency, Monetary)** and **K-Means Clustering** to segment customers based on their purchasing behavior using a real-world e-commerce dataset. The resulting customer segments support targeted marketing strategies and improve customer relationship management.
+
+---
 
 ## Dataset
-- **Source:** E-commerce transactional dataset (Online Retail)
-- **Records:** Customer purchase transactions (Invoice-level)
+
+* **Source:** Online Retail E-commerce Dataset
+* **Transactions:** 541,909
+* **Unique Customers:** 4,338
+
+---
 
 ## Tech Stack
-Python · pandas · scikit-learn · matplotlib · seaborn
 
-## Workflow
-1. **Data Cleaning** — removed nulls, duplicates, and invalid/cancelled transactions
-2. **RFM Feature Engineering** — calculated Recency, Frequency, and Monetary value per customer
-3. **Log Transform & Scaling** — handled skewness in RFM distributions before clustering
-4. **Optimal K Selection** — used Elbow Method and Silhouette Score to choose number of clusters
-5. **K-Means Clustering** — grouped customers into segments
-6. **Segment Labeling** — assigned business-meaningful names (VIP, Loyal, New, Lost) based on cluster profiles
-7. **3D Visualization** — visualized customer segments in RFM space
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib
+* Seaborn
+* Power BI
 
-## Segments Identified
-| Segment | Description |
-|---------|-------------|
-| VIP | High frequency, high spend, recent purchases |
-| Loyal | Regular purchases, moderate spend |
-| New | Recent first-time customers |
-| Lost | No recent activity, low engagement |
+---
 
-## Business Value
-This segmentation enables targeted marketing strategies — e.g., loyalty rewards for VIP customers, win-back campaigns for Lost customers, and onboarding flows for New customers.
+## Project Workflow
 
-## Files
-| File | Description |
-|------|-------------|
-| `customer_segmentation_rfm_kmeans.ipynb` | Full analysis notebook |
+1. Data Cleaning
 
-##  Power BI Dashboard
+   * Removed missing values, duplicates, cancelled orders, and invalid transactions.
 
-![Dashboard](dashboard_screenshot.png)
+2. Feature Engineering
+
+   * Calculated RFM metrics:
+
+     * Recency
+     * Frequency
+     * Monetary
+
+3. Data Preprocessing
+
+   * Applied logarithmic transformation.
+   * Standardized features using `StandardScaler`.
+
+4. Optimal Cluster Selection
+
+   * Determined the optimal number of clusters using the Elbow Method and Silhouette Score.
+
+5. Customer Segmentation
+
+   * Applied K-Means clustering to group customers with similar purchasing behavior.
+
+6. Business Interpretation
+
+   * Assigned meaningful business labels to each customer segment.
+
+7. Visualization
+
+   * Visualized customer segments using 3D plots and an interactive Power BI dashboard.
+
+---
+
+## Customer Segments
+
+| Segment | Description                                                |
+| ------- | ---------------------------------------------------------- |
+| VIP     | High-value customers with recent and frequent purchases.   |
+| Loyal   | Regular customers with consistent purchasing behavior.     |
+| New     | Recently acquired customers with limited purchase history. |
+| Lost    | Inactive customers with low spending and long recency.     |
+
+---
+
+## Results
+
+| Segment | Customers | Average Monetary |
+| ------- | --------: | ---------------: |
+| VIP     |       713 |           $8,088 |
+| Loyal   |     1,166 |           $1,802 |
+| New     |       837 |             $557 |
+| Lost    |     1,622 |             $341 |
+
+---
+
+## Power BI Dashboard
 
 ### Dashboard Highlights
-- **4,338** unique customers
-- **4 segments**: VIP, Loyal, New, Lost
-- Average Monetary: **$2,048**
-- Average Recency: **92 days**
 
-# Customer Segmentation - RFM Analysis & K-Means Clustering
+* 4,338 unique customers
+* 541,909 transactions analyzed
+* 4 customer segments
+* Average Monetary: **$2,048**
+* Average Recency: **92 days**
 
-## 📌 Overview
-Customer segmentation project using RFM Analysis and K-Means Clustering
-on real e-commerce data (541,909 transactions).
+The dashboard provides:
 
-## 📊 Dashboard
-![Dashboard](dashboard_screenshot.png)
+* Customer segment distribution
+* RFM metric analysis
+* Segment performance comparison
+* Business insights for marketing decisions
 
-## 🔧 Tech Stack
-- Python, Pandas, Scikit-learn
-- PyTorch (Autoencoder)
-- Power BI
+> Add Power BI dashboard screenshots here.
 
-## 📈 Results
-| Segment | Customers | Avg Monetary |
-|---------|-----------|--------------|
-| VIP     | 713       | $8,088       |
-| Loyal   | 1,166     | $1,802       |
-| New     | 837       | $557         |
-| Lost    | 1,622     | $341         |
+---
+
+## Business Value
+
+The segmentation enables businesses to:
+
+* Identify high-value customers for loyalty programs.
+* Improve customer retention strategies.
+* Design personalized marketing campaigns.
+* Reactivate inactive customers.
+* Support data-driven business decisions.
+
+---
+
+## Project Structure
+
+```text
+customer-segmentation-rfm/
+│
+├── customer_segmentation_rfm_kmeans.ipynb
+├── data/
+├── dashboard/
+├── images/
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## Future Improvements
+
+* Compare K-Means with DBSCAN and Hierarchical Clustering.
+* Deploy the project as an interactive web application.
+* Automate customer segmentation for new incoming transactions.
+* Predict Customer Lifetime Value (CLV).
