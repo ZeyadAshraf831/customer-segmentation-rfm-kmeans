@@ -33,3 +33,6 @@ This segmentation enables targeted marketing strategies — e.g., loyalty reward
 | File | Description |
 |------|-------------|
 | `customer_segmentation_rfm_kmeans.ipynb` | Full analysis notebook |
+
+## 📊 Power BI Dashboard
+![Dashboard]Screenshot 2026-07-16 131549.png)
