@@ -35,4 +35,11 @@ This segmentation enables targeted marketing strategies — e.g., loyalty reward
 | `customer_segmentation_rfm_kmeans.ipynb` | Full analysis notebook |
 
 ## 📊 Power BI Dashboard
+
 ![Dashboard](dashboard_screenshot.png)
+
+### Dashboard Highlights
+- **4,338** unique customers
+- **4 segments**: VIP, Loyal, New, Lost
+- Average Monetary: **$2,048**
+- Average Recency: **92 days**
